@@ -46,22 +46,22 @@ const Cabinet = () => {
     const classes = useStyles();
 
     return (
-       <div className={classes.root}>
-           <CssBaseline />
-           <AppBar position="fixed" className={classes.appBar}>
-               <Avatar className={classes.orange}>N</Avatar>
-           </AppBar>
-           <SideBar />
-           <main className={classes.content}>
-               <div className={classes.toolbar} />
-               <Typography variant="h4" className={classes.typography}>
-                   Проекты
-               </Typography>
-               <Box component="div" my={2}>
-                   <TabsPanel />
-               </Box>
-           </main>
-       </div>
+        <div className={classes.root}>
+            <CssBaseline />
+            <AppBar position="fixed" className={classes.appBar}>
+                <Avatar className={classes.orange}>N</Avatar>
+            </AppBar>
+            <SideBar />
+            <main className={classes.content}>
+                <div className={classes.toolbar} />
+                <Typography variant="h4" className={classes.typography}>
+                    Проекты
+                </Typography>
+                <Box component="div" my={2}>
+                    <TabsPanel />
+                </Box>
+            </main>
+        </div>
     );
 }
 

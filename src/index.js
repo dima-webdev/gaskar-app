@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import { ModalProvider } from "react-modal-hook";
 import { TransitionGroup } from "react-transition-group";
 import './index.scss';
 import App from './components/App';
+import { store } from "./redux/redux";
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
       <ModalProvider rootComponent={TransitionGroup}>
           <App />
       </ModalProvider>
-  </React.StrictMode>,
+  </Provider>
+  ,
   document.getElementById('root')
 );
 

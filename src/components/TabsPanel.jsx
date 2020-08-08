@@ -10,7 +10,8 @@ import Button from "@material-ui/core/Button";
 import AppsIcon from '@material-ui/icons/Apps';
 import MenuIcon from '@material-ui/icons/Menu';
 
-import CardProject from "./CardProject";
+// import CardProject from "./CardProject";
+import CardProjectList from "./CardProjectList";
 import ProjectForm from "./ProjectForm";
 
 function TabPanel(props) {
@@ -52,8 +53,8 @@ function TabPanel(props) {
                         <AppsIcon />
                         <MenuIcon />
                     </Box>
-                    <Box px={2} py={5} display="flex">
-                        <CardProject />
+                    <Box py={5}>
+                        <CardProjectList />
                     </Box>
                 </>
             )}

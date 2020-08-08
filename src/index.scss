@@ -1,13 +1,54 @@
-//body {
-//  margin: 0;
-//  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-//    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-//    sans-serif;
-//  -webkit-font-smoothing: antialiased;
-//  -moz-osx-font-smoothing: grayscale;
-//}
-//
-//code {
-//  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-//    monospace;
-//}
+.card-text {
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+
+  &_bg {
+    position: relative;
+    height: 180px;
+    background: url('https://stmegi.com/upload/iblock/d12/d1224be2b354b549cb3cafebfc2a7b07.jpg') center center;
+    background-size: cover;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: rgba(0, 0, 0, .2);
+    }
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+  }
+
+  &_style {
+    padding: 0.3em;
+    border-radius: 5px;
+    font-weight: 500;
+  }
+  
+  &__medical {
+    color: #333;
+    background: #fff;
+  }
+
+  &__status {
+    background: #4a148c;
+    color: #fff;
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 1.3em;
+  }
+}
