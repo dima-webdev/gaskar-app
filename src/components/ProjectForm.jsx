@@ -4,12 +4,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import { createProject } from "../redux/redux";
 import { connect } from "react-redux";
 
-const mapDispatchToProps = dispatch => {
-    return {
-        createProject: (data) => dispatch(createProject(data)),
-    };
-}
-
 const ProjectFrom = ({open, onExited, onClose, createProject}) => {
 
     const useStyles = makeStyles((theme) => ({
@@ -33,7 +27,7 @@ const ProjectFrom = ({open, onExited, onClose, createProject}) => {
         };
         createProject(values);
         onClose();
-    }, [onClose]);
+    }, [onClose, createProject]);
 
     return (
         <Dialog open={open} onExited={onExited} onClose={onClose} fullWidth={true} >
@@ -60,7 +54,7 @@ const ProjectFrom = ({open, onExited, onClose, createProject}) => {
                         </Grid>
                     </Grid>
                     <TextField required label="Руководитель проекта" name="boss" fullWidth />
-                    <TextField required label="Администратор проекта" name="admin" fullWidth />
+                    <TextField required label="Администратор проекта" name="admin" fullWidth margin="normal" />
                 </DialogContent>
                 <DialogActions>
                     <Button type="submit">Загрузить</Button>
@@ -70,5 +64,11 @@ const ProjectFrom = ({open, onExited, onClose, createProject}) => {
         </Dialog>
     );
 }
+
+const mapDispatchToProps = dispatch => {
+    return {
+        createProject: (data) => dispatch(createProject(data)),
+    };
+};
 
 export default connect(null, mapDispatchToProps)(ProjectFrom);

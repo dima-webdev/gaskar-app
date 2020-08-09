@@ -50,8 +50,8 @@ function TabPanel(props) {
                         </Button>
                     </Box>
                     <Box px={2} display="flex" justifyContent="flex-end">
-                        <AppsIcon />
-                        <MenuIcon />
+                        <Box mr={1.5}><AppsIcon /></Box>
+                        <Box><MenuIcon /></Box>
                     </Box>
                     <Box py={5}>
                         <CardProjectList />
