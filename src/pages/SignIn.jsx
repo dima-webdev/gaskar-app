@@ -9,6 +9,8 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import auth from "../auth";
+import Box from '@material-ui/core/Box';
+import Logo from '../images/logo-auth.png';
 
 const user = {
     name: 'admin',
@@ -32,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
     },
     submit: {
         margin: theme.spacing(3, 0, 2),
+        backgroundColor: "#c309d2",
     },
 }));
 
@@ -46,6 +49,8 @@ export default function SignIn(props) {
                 props.history.push("/cabinet");
             })
         } else {
+            email.value = '';
+            password.value = '';
             alert('Invalid email or password!');
         }
     }
@@ -53,7 +58,7 @@ export default function SignIn(props) {
     return (
         <Container component="main" maxWidth="xs">
             <CssBaseline />
-            {/*<Box component="div"><img src={Logo} alt="Logo" className="logo-auth" /></Box>*/}
+            <Box component="div"><img src={Logo} alt="Logo" className="logo-auth" /></Box>
             <div className={classes.paper}>
                 <form className={classes.form} noValidate onSubmit={onSubmitHandler}>
                     <TextField
@@ -88,6 +93,7 @@ export default function SignIn(props) {
                         variant="contained"
                         color="primary"
                         className={classes.submit}
+                        size="large"
                     >
                         Войти
                     </Button>
